@@ -10,5 +10,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //양채윤 김태규 안녕 방가웡
+        //나는 전재경이얌
+
     }
 }
