@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //양채윤 김태규 안녕 방가웡
-        //나는 전재경이얌
+        //나는 전재경이얌..
 
     }
 }
