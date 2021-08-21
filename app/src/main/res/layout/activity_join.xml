@@ -89,6 +89,7 @@
                 android:layout_weight="1"/>
     </LinearLayout>
     <Button
+            android:id="@+id/nextjoinBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="다음 페이지"/>
