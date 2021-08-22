@@ -33,16 +33,16 @@
             android:layout_height="wrap_content"
             android:text="지역"/>
         <Spinner
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:id="@+id/spinner"
+            android:id="@+id/spinner1"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:layout_toStartOf="@+id/searchBtn" />
         <Button
             android:text="선택"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -53,16 +53,16 @@
             android:layout_height="wrap_content"
             android:text="대학교"/>
         <Spinner
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:id="@+id/spinner"
+            android:id="@+id/spinner2"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:layout_toStartOf="@+id/searchBtn" />
         <Button
             android:text="선택"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -73,16 +73,16 @@
             android:layout_height="wrap_content"
             android:text="계열"/>
         <Spinner
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:id="@+id/spinner"
+            android:id="@+id/spinner3"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:layout_toStartOf="@+id/searchBtn" />
         <Button
             android:text="선택"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
     <Button
             android:id="@+id/finjoinBtn"
