@@ -14,7 +14,7 @@ public class join2activity extends AppCompatActivity {
 
     private FirebaseAuth mAuth; //fb 인증처리
     private DatabaseReference mRef; //실시간 db
-    private EditText mIpId, mIpPw;
+    private EditText mJId, mJPw;
     private Button mfinjoin;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,8 @@ public class join2activity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mRef = FirebaseDatabase.getInstance().getReference();
 
-        mIpId = findViewById(R.id.InputIdtxt);
-        mIpPw = findViewById(R.id.InputPwtxt);
+        mJId = findViewById(R.id.JoinIdtxt);
+        mJPw = findViewById(R.id.JoinPwtxt);
         mfinjoin = findViewById(R.id.finjoinBtn);
 
         mfinjoin.setOnClickListener(new View.OnClickListener() {

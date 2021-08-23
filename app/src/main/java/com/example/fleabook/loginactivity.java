@@ -11,8 +11,9 @@ import android.widget.Toast;
 
 public class loginactivity extends AppCompatActivity {
 
-    Button loginBtn, joinBtn;
-    EditText InputIdtxt, InputPwtxt;
+    Button mloginBtn, mjoinBtn;
+    EditText mLIdtxt, mLPwtxt;
+    String strId, strPw;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,41 +21,53 @@ public class loginactivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        loginBtn=findViewById(R.id.loginBtn);
-        joinBtn=findViewById(R.id.joinBtn);
-        InputIdtxt=findViewById(R.id.InputIdtxt);
-        InputPwtxt=findViewById(R.id.InputPwtxt);
+
+        mloginBtn=findViewById(R.id.loginBtn);
+        mjoinBtn=findViewById(R.id.joinBtn);
+
+        mLIdtxt=findViewById(R.id.LoginIdtxt);
+        mLPwtxt=findViewById(R.id.LoginPwtxt);
 
 
 
-        InputIdtxt.setOnClickListener(new View.OnClickListener() {
+        mLIdtxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             }
         });
 
-        InputPwtxt.setOnClickListener(new View.OnClickListener() {
+        mLPwtxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             }
         });
 
-        loginBtn.setOnClickListener(new View.OnClickListener() {
+        mloginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                strId = mLIdtxt.getText().toString();
+                strPw = mLPwtxt.getText().toString();
+
                 Intent intent = new Intent(loginactivity.this, homeactivity.class);
+                startActivity(intent);
+                //finish();
+                intent.putExtra("로그인id(strId)", strId);
+                intent.putExtra("로그인pw(strPw)", strPw);
 
                 Toast.makeText(getApplicationContext(), "안녕하세요!", Toast.LENGTH_SHORT).show();
             }
 
         });
 
-        joinBtn.setOnClickListener(new View.OnClickListener() {
+        mjoinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(loginactivity.this, joinactivity.class);
+                startActivity(intent);
+                //finish();
 
             }
         });
