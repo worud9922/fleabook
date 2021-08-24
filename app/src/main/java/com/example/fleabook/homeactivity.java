@@ -9,22 +9,24 @@ import android.widget.TextView;
 public class homeactivity extends AppCompatActivity {
 //양채윤이 사용자 인증 데이터 넘길 곳? 홈 메인 화면
 
-    TextView getLD1, getLD2;
+    TextView getLD;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        getLD1 = findViewById(R.id.getLogData1);
-        getLD2 = findViewById(R.id.getLogData2);
+        getLD = findViewById(R.id.getLogData);
+        //getLD2 = findViewById(R.id.getLogData2);
 
-        Intent intent = getIntent();
-        String strId = intent.getStringExtra("strId");
-        String strPw = intent.getStringExtra("strPw");
+        Intent intent = getIntent(); //로그인 -> 메인화면
+        Bundle bundle = intent.getExtras();
+        String strId = bundle.getString("strId");
+        String strPw = bundle.getString("strPw");
 
-        getLD1.setText(strId);
-        getLD2.setText(strPw);
+        getLD.setText(strId + "/" + strPw);
+
+        Intent intent3 = getIntent(); //회원가이 -> 메인화면
 
     }
 }

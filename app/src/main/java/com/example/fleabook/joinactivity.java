@@ -18,12 +18,14 @@ public class joinactivity extends AppCompatActivity {
 
         nxtjoinBtn = findViewById(R.id.nextjoinBtn);
 
+        Intent intent1 = getIntent(); //로그인 -> 회원가이
+
 
         nxtjoinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(joinactivity.this, join2activity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(joinactivity.this, join2activity.class);
+                startActivity(intent2);
             }
         });
 

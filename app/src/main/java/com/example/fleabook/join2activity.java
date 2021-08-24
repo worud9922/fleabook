@@ -1,6 +1,8 @@
 package com.example.fleabook;
 
         import androidx.appcompat.app.AppCompatActivity;
+
+        import android.content.Intent;
         import android.os.Bundle;
         import android.view.View;
         import android.widget.Button;
@@ -21,6 +23,8 @@ public class join2activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join_2);
 
+        Intent intent2 = getIntent(); //회원가이 1페이지 -> 회원가이 2페이지
+
         mAuth = FirebaseAuth.getInstance();
         mRef = FirebaseDatabase.getInstance().getReference();
 
@@ -32,6 +36,9 @@ public class join2activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //회원가이 처리 시작
+
+                Intent intent3 = new Intent(join2activity.this, homeactivity.class);
+                startActivity(intent3);
 
             }
         });
