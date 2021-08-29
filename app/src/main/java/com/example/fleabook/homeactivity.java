@@ -17,16 +17,14 @@ public class homeactivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         getLD = findViewById(R.id.getLogData);
-        //getLD2 = findViewById(R.id.getLogData2);
 
-        Intent intent = getIntent(); //로그인 -> 메인화면
+
+        Intent intent = getIntent(); //로그인 정보 -> 홈화면
         Bundle bundle = intent.getExtras();
-        String strId = bundle.getString("strId");
-        String strPw = bundle.getString("strPw");
+        String strEmail = bundle.getString("Email");
 
-        getLD.setText(strId + "/" + strPw);
+        getLD.setText(strEmail);
 
-        Intent intent3 = getIntent(); //회원가이 -> 메인화면
 
     }
 }

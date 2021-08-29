@@ -13,11 +13,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
         <EditText
-                android:id="@+id/JoinIdtxt"
+                android:id="@+id/JoinEmailtxt"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="아이디(이메일 주소)"
+                android:hint="아이디(이메일 주소)"
                 android:layout_weight="3"/>
         <Button
                 android:text="중복확인"
@@ -29,23 +28,24 @@
             android:id="@+id/JoinPwtxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="비밀번호"/>
+        android:inputType="textPassword"
+            android:hint="비밀번호"/>
 
     <EditText
+        android:id="@+id/JoinPwChecktxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="비밀번호 확인"/>
+        android:inputType="textPassword"
+            android:hint="비밀번호 확인"/>
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
         <EditText
+            android:id="@+id/JoinPhonetxt"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="휴대전화번호('-'제외)"
+                android:hint="휴대전화번호('-'제외)"
                 android:layout_weight="3"/>
         <Button
                 android:text="본인인증"
@@ -60,8 +60,7 @@
         <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="인증번호 입력"
+                android:hint="인증번호 입력"
                 android:layout_weight="3"/>
         <Button
                 android:text="확인"
@@ -74,10 +73,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
         <EditText
+            android:id="@+id/JoinBirthtxt"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="생년월일 (8자리 입력)"
+                android:hint="생년월일 (8자리 입력)"
                 android:layout_weight="3"/>
         <CheckBox
                 android:text="남성"
@@ -90,11 +89,87 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
     </LinearLayout>
-    <Button
-            android:id="@+id/nextjoinBtn"
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/JoinNicktxt"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="다음 페이지"/>
+            android:hint="닉네임"
+            android:layout_weight="3"/>
+        <Button
+            android:text="중복확인"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="지역"/>
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:id="@+id/spinner1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/searchBtn" />
+        <Button
+            android:text="선택"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대학교"/>
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:id="@+id/spinner2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/searchBtn" />
+        <Button
+            android:text="선택"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="계열"/>
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:id="@+id/spinner3"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/searchBtn" />
+        <Button
+            android:text="선택"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/finjoinBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="완료"/>
 
 
 

@@ -15,8 +15,7 @@
             android:layout_width="match_parent"
             android:layout_marginTop="50dp"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="아이디를 입력하세요." />
+            android:hint="아이디(이메일)을 입력하세요." />
     <EditText
             android:id="@+id/LoginPwtxt"
             android:layout_width="match_parent"
@@ -24,7 +23,7 @@
             android:inputType="textPassword"
             android:hint="비밀번호를 입력하세요."/>
     <TextView
-            android:text="아이디 혹은 비밀번호가 일치하지 않습니다."
+            android:text="아이디(이메일) 혹은 비밀번호가 일치하지 않습니다."
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     <Button
@@ -36,11 +35,12 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
         <Button
-                android:id="@+id/joinBtn"
-        android:layout_marginTop="100dp"
-        android:text="아직 회원이 아닌가요? 회원가입"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            android:id="@+id/joinBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="아직 회원이 아닌가요? 회원가입" />
     </LinearLayout>
 </LinearLayout>
