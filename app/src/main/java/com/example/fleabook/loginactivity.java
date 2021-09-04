@@ -67,7 +67,7 @@ public class loginactivity extends AppCompatActivity {
                             finish();//로그인 액티비티 종료
                             Toast.makeText(getApplicationContext(), "안녕하세요!", Toast.LENGTH_SHORT).show();
                         }else{
-                            Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "아이디 혹은 비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -95,6 +95,7 @@ public class loginactivity extends AppCompatActivity {
                 return valid;
             }
         });
+
 
 
 
