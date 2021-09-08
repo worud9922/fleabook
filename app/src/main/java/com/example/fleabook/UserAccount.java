@@ -1,5 +1,7 @@
 package com.example.fleabook;
 
+//사용자 계정 모델 class
+
 public class UserAccount {
 
     private String idToken;
@@ -9,9 +11,12 @@ public class UserAccount {
     private String nickName;
     private String phoneNum;
     private String birth;
+//    private String male;
+//    private String female;
     //지역 대학교 계열 성별
 
-    public UserAccount(){ }
+    public UserAccount() {
+    }
 
     public String getIdToken() {
         return idToken;
@@ -68,4 +73,20 @@ public class UserAccount {
     public void setBirth(String birth) {
         this.birth = birth;
     }
+
+//    public String getMale() {
+//        return male;
+//    }
+//
+//    public void setMale(String male) {
+//        this.male = male;
+//    }
+//
+//    public String getFemale() {
+//        return female;
+//    }
+//
+//    public void setFemale(String female) {
+//        this.female = female;
+//    }
 }

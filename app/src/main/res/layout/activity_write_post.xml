@@ -74,6 +74,7 @@
                 android:layout_toStartOf="@+id/searchBtn" />
     </LinearLayout>
     <Button
+            android:id="@+id/BtnWfin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="완료"/>

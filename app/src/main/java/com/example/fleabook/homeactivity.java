@@ -4,26 +4,36 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ListView;
 import android.widget.TextView;
 
-public class homeactivity extends AppCompatActivity {
-//양채윤이 사용자 인증 데이터 넘길 곳? 홈 메인 화면
+import java.util.ArrayList;
+import java.util.List;
 
-    TextView getLD;
+public class homeactivity extends AppCompatActivity {
+
+    TextView getLD1, getLD2;
+    private ListView mPlist;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        getLD = findViewById(R.id.getLogData);
+        getLD1 = findViewById(R.id.getLogData1);
+        getLD2 =findViewById(R.id.getLogData2);
 
 
         Intent intent = getIntent(); //로그인 정보 -> 홈화면
         Bundle bundle = intent.getExtras();
         String strEmail = bundle.getString("Email");
+        String strPw = bundle.getString("Pw");
 
-        getLD.setText(strEmail);
+        getLD1.setText(strEmail);
+        getLD2.setText(strPw);
+
+        mPlist=(ListView)findViewById(R.id.Plist);
+        List<String> data = new ArrayList<>();
 
 
     }
