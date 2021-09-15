@@ -29,7 +29,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
         android:inputType="textPassword"
-            android:hint="비밀번호"/>
+            android:hint="비밀번호"
+        />
 
     <EditText
         android:id="@+id/JoinPwChecktxt"
@@ -41,12 +42,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
         <EditText
             android:id="@+id/JoinPhonetxt"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="휴대전화번호('-'제외)"
-                android:layout_weight="3"/>
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="휴대전화번호('-'제외)"
+            android:inputType="phone" />
+
         <Button
                 android:text="본인인증"
                 android:layout_width="0dp"
@@ -79,7 +83,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:hint="생년월일 (8자리 입력)" />
+            android:hint="생년월일 (8자리 입력)"
+            android:inputType="date"/>
 
         <RadioGroup
             android:id="@+id/gender"

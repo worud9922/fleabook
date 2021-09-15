@@ -4,10 +4,9 @@ package com.example.fleabook;
 
 public class UserAccount {
 
-    private String idToken;
+//    private String idToken;
     private String email;       //id
     private String pw;
-    private String pwCheck;
     private String nickName;
     private String phoneNum;
     private String birth;
@@ -15,19 +14,25 @@ public class UserAccount {
 //    private String female;
     //지역 대학교 계열 성별
 
-    public UserAccount() {
+    public UserAccount(String email,String pw,String nickName, String phoneNum , String birth ) {
+        this.email=email;
+        this.pw=pw;
+        this.nickName=nickName;
+        this.phoneNum=phoneNum;
+        this.birth=birth;
     }
 
-    public String getIdToken() {
-        return idToken;
-    }
 
-    public void setIdToken(String idToken) {
-        this.idToken = idToken;
-    }
+//    public String getIdToken() {
+//        return idToken;
+//    }
+//
+//    public void setIdToken(String idToken) {
+//        this.idToken = idToken;
+//    }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
@@ -35,23 +40,15 @@ public class UserAccount {
     }
 
     public String getPw() {
-        return pw;
+        return this.pw;
     }
 
     public void setPw(String pw) {
         this.pw = pw;
     }
 
-    public String getPwCheck() {
-        return pwCheck;
-    }
-
-    public void setPwCheck(String pwCheck) {
-        this.pwCheck = pwCheck;
-    }
-
     public String getNickname() {
-        return nickName;
+        return this.nickName;
     }
 
     public void setNickname(String nickName) {
@@ -59,7 +56,7 @@ public class UserAccount {
     }
 
     public String getPhoneNum() {
-        return phoneNum;
+        return this.phoneNum;
     }
 
     public void setPhoneNum(String phoneNum) {
@@ -67,7 +64,7 @@ public class UserAccount {
     }
 
     public String getBirth() {
-        return birth;
+        return this.birth;
     }
 
     public void setBirth(String birth) {

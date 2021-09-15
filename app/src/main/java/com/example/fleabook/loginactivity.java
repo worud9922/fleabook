@@ -17,27 +17,25 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class loginactivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-    private DatabaseReference mRef;
+//    private DatabaseReference mRef;
 
     private EditText mEmail;
     private EditText mPw;
     private Button mloginBtn, mjoinBtn;
-
-//    String strId;
-//    String strPw;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
-        mRef = FirebaseDatabase.getInstance().getReference("Fleabook");
+//        mRef = FirebaseDatabase.getInstance().getReference("Fleabook");
 
         mloginBtn=findViewById(R.id.loginBtn); //로그인 버튼
         mjoinBtn=findViewById(R.id.joinBtn); //회원가입 버튼
@@ -60,11 +58,13 @@ public class loginactivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             //로그인 성공
+                            FirebaseUser user = mAuth.getCurrentUser();
                             Intent intent = new Intent(loginactivity.this, homeactivity.class);
-                            intent.putExtra("Email", strEmail);
-                            intent.putExtra("Pw", strPw);
+//                            intent.putExtra("Email", strEmail);
+//                            intent.putExtra("Pw", strPw);
                             startActivity(intent);//홈 액티비티 이동
-                            finish();//로그인 액티비티 종료
+                            myStartActivity(homeactivity.class);
+//                            finish();//로그인 액티비티 종료
                             Toast.makeText(getApplicationContext(), "안녕하세요!", Toast.LENGTH_SHORT).show();
                         }else{
                             Toast.makeText(getApplicationContext(), "아이디 혹은 비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
@@ -96,19 +96,27 @@ public class loginactivity extends AppCompatActivity {
             }
         });
 
-
-
-
         mjoinBtn.setOnClickListener(new View.OnClickListener() { //회원가입 이동
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(loginactivity.this, joinactivity.class);
                 startActivity(intent1);
-
-
             }
         });
-
-
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(1);
+    }
+
+    private void myStartActivity(Class c) {
+        Intent intent = new Intent(this, c);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+
 }

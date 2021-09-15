@@ -21,11 +21,17 @@
         android:textSize="30dp"/>
 
     <ImageButton
+        android:id="@+id/writeBtn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/write"
         android:scaleType="centerCrop">
     </ImageButton>
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그아웃" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -36,15 +42,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ListView
-                android:id="@+id/Plist"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                ></ListView>
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 
     </ScrollView>
-<!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
 
 </LinearLayout>
